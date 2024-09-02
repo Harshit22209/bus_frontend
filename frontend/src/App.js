@@ -3,6 +3,7 @@ import React from 'react';
 import MapComponent from './components/MapComponent';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 import RoutesList from './components/RouteList';
+import RouteMap from './components/RouteMap';
 function App() {
   let markers = [
     { id: 1, name: 'Badarpur Border', lat: 28.5033, lng: 77.3260 },
@@ -26,7 +27,7 @@ function App() {
   
       <Route path="/routes" element={<RoutesList />}  />
       <Route path="/:type/:id" element={<MapComponent />} />
-      
+      <Route path='/showRoutes' element={<RouteMap />} />
     </Routes>
     </BrowserRouter>
     </div>

@@ -4,6 +4,13 @@ import routes from './RoutesDB';
 
 const RoutesList = () => {
     return (
+        <div>
+          <Link 
+                            to={`/showRoutes`} 
+                            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300"
+                        >
+                            Show Map
+                        </Link>  
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
             {routes.map(route => (
                 <div 
@@ -36,6 +43,7 @@ const RoutesList = () => {
                     </div>
                 </div>
             ))}
+        </div>
         </div>
     );
 };
